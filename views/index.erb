@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Emails Sender</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body>
+    <div class='container'>
+      <p><%= flash[:error] %></p>
+      <form action="/send_message/" method="POST">
+        <div class='box'>
+          Login Info </br>
+          Enter Your Email:<br>
+          <input type="text" name="email"><br>
+          Enter Your Password:<br>
+          <input type="password" name="password"><br><br>
+        </div>
+        <div class='box email-box'>
+          Email Info </br>
+          Enter Recipients (Separate with commas): <br>
+          <textarea rows="4" cols="50" name="recipients"></textarea><br>
+          Enter Email Subject:<br>
+          <input type="text" name="subject"><br>
+          Enter Email Body: <br>
+          <textarea rows="4" cols="50" name="body"></textarea><br><br>
+          <input type="submit" value="Send" id='send_message'>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
